@@ -4,3 +4,7 @@
 /* purgecss end ignore */
 
 @tailwind utilities;
+
+.gradient {
+  background: linear-gradient(90deg, #cc9900 0%, #daae51 100%);
+}
