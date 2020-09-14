@@ -1,9 +1,9 @@
 function Section({ id, section, items }) {
   return (
-    <>
+    <div className="mb-16">
       <h2
         id={"section-" + id}
-        className="text-3xl text-gray-800 font-bold leading-none mb-3">
+        className="text-3xl text-gray-800 font-bold leading-none mb-3 border-b-2">
         {section}
       </h2>
       <div className="flex flex-wrap">
@@ -13,17 +13,17 @@ function Section({ id, section, items }) {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
 function Item({ item }) {
   return (
-    <div className="card mb-3">
-      <div className="card-body">
+    <div className="mb-3 pr-3">
+      <div className="">
         <h5 className="mt-0 text-xl font-bold">{item.name}</h5>
-        <em>{item.description}</em>
-        <div>£{item.price}</div>
+        <em className="font-normal">{item.description}</em>
+        <div className="font-bold">£{item.price}</div>
       </div>
     </div>
   );

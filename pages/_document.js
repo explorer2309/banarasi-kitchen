@@ -58,10 +58,14 @@ function Header() {
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div className="pl-4 flex items-center">
           <a
-            className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-            href="#">
+            className="toggleColour text-white no-underline hover:no-underline font-bold text-4xl lg:text-4xl"
+            href="/">
             <Logo />
-            <span className="ml-3">Banarasi Kitchen</span>
+            <span
+              className="ml-3"
+              style={{ fontFamily: "Almendra, 'Source Sans Pro'" }}>
+              Banarasi Kitchen
+            </span>
           </a>
         </div>
 
@@ -132,10 +136,14 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body
           className="leading-normal tracking-normal text-white gradient"
-          style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>
+          style={{ fontFamily: "Almendra, 'Source Sans Pro', sans-serif" }}>
           <Header />
           <Main />
           <NextScript />
