@@ -1,3 +1,3 @@
 export default function Accomodation() {
-  return <h1>Accomodation</h1>;
+  return <h1 class="primary-heading">Accomodation</h1>;
 }

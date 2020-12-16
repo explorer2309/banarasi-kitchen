@@ -1,57 +1,7 @@
-function Section({ id, section, items }) {
-  return (
-    <div className="mb-16">
-      <h2
-        id={"section-" + id}
-        className="text-3xl text-gray-800 font-bold leading-none mb-3 border-b-2">
-        {section}
-      </h2>
-      <div className="flex flex-wrap">
-        {items.map((item, idx) => (
-          <div key={idx} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-4">
-            <Item item={item} />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function Item({ item }) {
-  return (
-    <div className="mb-3 pr-3">
-      <div className="">
-        <h5 className="mt-0 text-xl font-bold">{item.name}</h5>
-        <em className="font-normal">{item.description}</em>
-        <div className="font-bold">£{item.price}</div>
-      </div>
-    </div>
-  );
-}
-
-function Header({ menu }) {
-  return null;
-  return (
-    <nav id="navbar-example2" className="navbar navbar-light bg-light">
-      <ul className="nav nav-pills">
-        {menu.map((menuItem) => {
-          return (
-            <li className="nav-item">
-              <a className="nav-link" href={"#section-" + menuItem.id}>
-                {menuItem.section}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
-  );
-}
-
-export default function Menu({ menu }) {
+export default function TopPart() {
   return (
     <>
-      <div className="pt-24">
+      <div className="pt-12">
         <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
           &nbsp;
         </div>
@@ -86,27 +36,6 @@ export default function Menu({ menu }) {
           </g>
         </svg>
       </div>
-
-      <div className="text-gray-800">
-        <Header menu={menu} />
-        <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-          <section className="bg-white border-b py-8 px-8">
-            {menu.map(({ id, section, items }) => (
-              <Section key={id} id={id} section={section} items={items} />
-            ))}
-          </section>
-        </div>
-      </div>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const data = await import("../data/menu.json");
-  const menu = data.menu;
-  return {
-    props: {
-      menu: data.menu,
-    },
-  };
 }

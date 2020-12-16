@@ -8,3 +8,16 @@
 .gradient {
   background: linear-gradient(90deg, #cc9900 0%, #daae51 100%);
 }
+@layer components {
+  .primary-heading {
+    @apply text-3xl text-gray-800 font-bold leading-none mb-3 border-b-2;
+  }
+
+  .secondary-heading {
+    @apply text-xl text-gray-800 font-bold leading-none mb-2 mt-5;
+  }
+
+  .main-content {
+    @apply bg-white border-b py-8 px-8 text-gray-800 mx-auto max-w-4xl;
+  }
+}
