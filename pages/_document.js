@@ -81,7 +81,7 @@ function Header() {
           </a>
         </div>
 
-        <div className="block lg:hidden pr-4">
+        <div className="block lg:hidden pr-4 text-center">
           <button
             id="nav-toggle"
             className="flex items-center p-1 text-orange-800 hover:text-gray-900">
@@ -153,10 +153,10 @@ function NewHeader() {
         </a>
       </span>
 
-      <div className="block lg:hidden pr-4">
+      <div className="block lg:hidden pr-4 text-center ">
         <button
           id="nav-toggle"
-          className="flex items-center p-1 text-orange-800 hover:text-gray-900">
+          className="flex items-center p-1 text-orange-800 hover:text-gray-900 mx-auto">
           <svg
             className="fill-current h-6 w-6"
             viewBox="0 0 20 20"
@@ -175,7 +175,7 @@ function NewHeader() {
             return (
               <li className="mr-3" key={idx}>
                 <a
-                  className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                  className="inline-block text-white text-opacity-75 no-underline hover:text-opacity-100 hover:text-underline py-2 px-4"
                   href={item.href}>
                   {item.name}
                 </a>

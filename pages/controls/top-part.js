@@ -1,12 +1,7 @@
 export default function TopPart() {
   return (
     <>
-      <div className="pt-12">
-        <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-          &nbsp;
-        </div>
-      </div>
-      <div className="relative -mt-12 lg:-mt-24">
+      <div className="">
         <svg
           viewBox="0 0 1428 174"
           version="1.1"
